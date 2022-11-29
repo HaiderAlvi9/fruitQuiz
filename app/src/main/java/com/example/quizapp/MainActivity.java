@@ -13,10 +13,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button b1,b2,b3,b4;
     ImageView iv;
     TextView textView;
+    int rightCount,wrongCount;
     int oriAns;
-  int[] images ={R.drawable.img1,R.drawable.img3,R.drawable.img4,R.drawable.img5};
+  int[] images ={R.drawable.img1,
+          R.drawable.img2,
+          R.drawable.img3,
+          R.drawable.img4,
+          R.drawable.img5,
+          R.drawable.img6,
+          R.drawable.img7,
+          R.drawable.img8,
+          R.drawable.img9
+         };
 
-    String [] a={"apple","grapes","guava","banana"};
+    String [] a={"apple","oranges","grapes","guava","banana",
+            "mango","melon","water melon","strawberry"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,35 +53,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           String btnText=b1.getText().toString();
           if(btnText.equals(a[oriAns])){
               b4.setText("Awesome");
-
+                   rightCount++;
           }
           else{
               b4.setText("OOPs");
-
+              wrongCount++;
           }
         }
         if (view.getId()==R.id.btn2){
             String btnText=b2.getText().toString();
             if(btnText.equals(a[oriAns])){
                 b4.setText("Awesome");
-
+                rightCount++;
             }
             else{
                 b4.setText("OOPs");
-
+                wrongCount++;
             }
         }
         if (view.getId()==R.id.btn3){
             String btnText=b3.getText().toString();
             if(btnText.equals(a[oriAns])){
                 b4.setText("Awesome");
-
+                rightCount++;
             }
             else{
                 b4.setText("OOPs");
-
+            wrongCount++;
             }
         }
+        textView.setText("Right " + rightCount + "\nWrong " + wrongCount);
         generateRandom();
     }
    public void generateRandom(){
@@ -113,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        }
       iv.setImageResource(images[oriAns]);
 
-     
+
 
 
 
