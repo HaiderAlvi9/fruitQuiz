@@ -53,10 +53,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           String btnText=b1.getText().toString();
           if(btnText.equals(a[oriAns])){
               b4.setText("Awesome");
+              b4.setBackgroundColor(getResources().getColor(R.color.green));
                    rightCount++;
           }
           else{
               b4.setText("OOPs");
+              b4.setBackgroundColor(getResources().getColor(R.color.red));
               wrongCount++;
           }
         }
@@ -64,10 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String btnText=b2.getText().toString();
             if(btnText.equals(a[oriAns])){
                 b4.setText("Awesome");
+                b4.setBackgroundColor(getResources().getColor(R.color.green));
                 rightCount++;
             }
             else{
                 b4.setText("OOPs");
+                b4.setBackgroundColor(getResources().getColor(R.color.red));
                 wrongCount++;
             }
         }
@@ -75,10 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String btnText=b3.getText().toString();
             if(btnText.equals(a[oriAns])){
                 b4.setText("Awesome");
+                b4.setBackgroundColor(getResources().getColor(R.color.green));
                 rightCount++;
             }
             else{
                 b4.setText("OOPs");
+                b4.setBackgroundColor(getResources().getColor(R.color.red));
             wrongCount++;
             }
         }
